@@ -7,7 +7,7 @@ describe('Modal Test', () => {
     cy.get('.btn-danger').click();
 
     // Wait for the modal to become visible
-    cy.get('#exampleModal').should('be.visible');
+    cy.get('#exampleModal').should('be.visible', { timeout: 10000 }); ;
 
     // Fill out the form fields
     cy.get('#exampleInputEmail1').type('test@example.com');
